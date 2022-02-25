@@ -1,0 +1,190 @@
+{% load static %}
+
+
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Sislaf</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'hm/layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+    <style>
+  .abcd{
+  height:100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  }
+  </style>
+</head>
+<body id="top">
+<div class="abcd " style="background-image:url({% static 'hm/images/demo/backgrounds/bg.jpg' %});">
+  <!-- ################################################################################################ -->
+
+<!--      <div class="fl_left">-->
+<!--        &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--        <ul class="nospace">-->
+
+<!--        </ul>-->
+<!--        &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      </div>-->
+
+
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <!-- ################################################################################################ -->
+        <h1><a href="/">AVODHA SHOPPING</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+<!--<div class="dropdown">-->
+<!--  <button class="dropbtn">Filter</button>&emsp;-->
+<!--    <br><br>-->
+
+<!--  <div class="dropdown-content">-->
+
+<!--      {% for i in ct %}-->
+<!--      <a href="/">All Products</a>-->
+<!--  <a href={{i.get_url}}>{{i.name}}</a>-->
+
+<!--      {% endfor%}-->
+<!--  </div>-->
+<!--</div>-->
+      <nav id="mainav" class="fl_right">
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+
+          <li><a class="active" href="{% url 'cartdetails' %}"><i class="fa fa-shopping-cart" style="font-size:14px"></i>({{itc}})</a></li>
+
+<!--          {% if user.is_authenticated %}-->
+<!--          <li>Hai {{user.username}}</li>-->
+<!--          <li><a class="active" href="accounts/logout">logout</a></li>-->
+<!--          {% else %}-->
+<!--          <li><a class="active" href="accounts/register">Register</a></li>-->
+<!--          <li><a class="active" href="accounts/login">Login</a></li>-->
+<!--           {% endif %}-->
+
+
+        <!-- ################################################################################################ -->
+        </ul>
+
+      </nav>
+    </header>
+  </div>
+
+<div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+  <div class="fl_right">
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+
+          <li id="searchform">
+            <div>
+              <form action="{% url 'search' %}" method="get">
+                <fieldset>
+                  <legend>Quick Search:</legend>
+                  <input type="text" placeholder="Enter item name to search" name="q">
+                  <button type="submit"><i class="fas fa-search"></i></button>
+                </fieldset>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+         </div>
+  </div>
+<!--    <div class="dropdown">-->
+<!--  <button class="dropbtn">Filter</button>&emsp;-->
+<!--    <br><br>-->
+
+<!--  <div class="dropdown-content">-->
+<!--      <a href="/">All Products</a>-->
+<!--      {% for i in ct %}-->
+
+<!--  <a href={{i.get_url}}>{{i.name}}</a>-->
+
+<!--      {% endfor%}-->
+<!--  </div>-->
+<!--</div>-->
+  <div id="pageintro" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">QUALITY FOOD ITEMS</h3>
+      <p>Register with us & have quality food items at your door step.</p>
+
+      <footer>
+
+      </footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!--<div class="wrapper row3">-->
+<!--  <main class="hoc container clear">-->
+<!--    &lt;!&ndash; main body &ndash;&gt;-->
+<!--    &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--&lt;!&ndash;    <section id="introblocks">&ndash;&gt;-->
+<!--&lt;!&ndash;      <ul class="nospace group btmspace-80">&ndash;&gt;-->
+<!--&lt;!&ndash;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        {% for i in pr %}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <li class="one_third">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <figure><a class="imgover" href="#"><img src="{{i.img.url}}" alt=""></a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <figcaption>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              <h6 class="heading">{{i.name}}</h6>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              <p>{{i.desc}}</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            </figcaption>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          </figure>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        {% endfor %}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--&lt;!&ndash;      </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+<!--    <hr class="btmspace-80">-->
+
+<!--    &lt;!&ndash; / main body &ndash;&gt;-->
+<!--    <div class="clear"></div>-->
+<!--  </main>-->
+<!--</div>-->
+
+
+<!--<hr class="btmspace-80">-->
+
+<!-- <section id="introblocks">-->
+<!--      <ul class="nospace group btmspace-80">-->
+
+<!--        {% for i in pr %}-->
+<!--        <li class="one_third">-->
+<!--            &nbsp;-->
+<!--            &emsp;-->
+<!--          <br> <br>-->
+<!--            <figure><a class="imgover" href="{{i.get_url}}"><img src="{{i.img.url}}" alt="" style="height:200px;width:200px"></a>-->
+<!--            <figcaption>-->
+<!--              <h6 class="heading">{{i.name}}</h6>-->
+<!--              <p>{{i.desc|truncatewords:17}}</p>-->
+<!--                <br>-->
+<!--                <p><b>Price:{{i.price}} .Rs</b></p>-->
+<!--                <br>-->
+<!--                <p> Stock left:{{i.stock}}</p>-->
+<!--            </figcaption>-->
+<!--          </figure>-->
+<!--        {% endfor %}-->
+
+<!--        </li>-->
+
+
+<!--      </ul>-->
+<!-- </section>-->
+
+<!-- JAVASCRIPTS -->
+<script src="{% static 'hm/layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'hm/layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'hm/layout/scripts/jquery.mobilemenu.js' %}"></script>
+{% block content %}
+{% endblock %}
+</body>
+</html>
